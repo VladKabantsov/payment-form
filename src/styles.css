@@ -47,3 +47,11 @@ input:focus, select:focus {
   color: #94a545;
   outline: none;
 }
+
+input[_ngcontent-c2]:focus, select[_ngcontent-c2]:focus {
+  background: #fbfbfb;
+  border-color: #94a545;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  color: #94a545;
+  outline: none;
+}

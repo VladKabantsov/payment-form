@@ -8,7 +8,6 @@ import { CardFormComponent } from './components/card-form/card-form.component';
 import { UserFormComponent } from './components/user-form/user-form.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule, MatCheckboxModule } from '@angular/material';
 import { PaymentProcessedComponent } from './components/payment-processed/payment-processed.component';
 
 @NgModule({
@@ -24,10 +23,9 @@ import { PaymentProcessedComponent } from './components/payment-processed/paymen
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

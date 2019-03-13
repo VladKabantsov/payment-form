@@ -1,0 +1,425 @@
+.billing-address {
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  float: left;
+  left: 0;
+  opacity: 1;
+  padding: 0 30px 20px;
+  position: relative;
+  top: 0;
+  transition: left .7s,opacity .7s,max-height .7s,height .7s,padding .7s;
+  width: 350px;
+  z-index: 3;
+}
+
+.billing-address h4 {
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.2em;
+  margin: 20px 0 0;
+  color: #94a545;
+}
+
+label {
+  display: block;
+  font-weight: 300;
+  margin: 15px 0 5px 11px;
+}
+
+input[readonly], input[readonly]:focus {
+  background: #fff;
+  color: #999;
+}
+
+.fake-input, input {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: #fbfbfb;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  color: #969696;
+  font-weight: 300;
+  line-height: 21px;
+  padding: 10px;
+  width: 100%;
+}
+
+abbr[title] {
+  border: 0;
+  color: #f10d3d;
+  display: inline-block;
+  margin-left: -11px;
+  width: 11px;
+}
+
+abbr[title], acronym[title] {
+  text-decoration: underline dotted;
+}
+
+.form-group.select.optional, .form-group.select.required {
+  position: relative;
+}
+
+.form-group.select.optional select.for_chosen, .form-group.select.optional select.for_chosen:required, .form-group.select.required select.for_chosen, .form-group.select.required select.for_chosen:required {
+  display: block!important;
+  opacity: 0;
+  padding: 9px 0;
+  position: absolute;
+  z-index: 0;
+}
+
+select {
+  -moz-appearance: menulist-text;
+  -webkit-appearance: none;
+  background: #fbfbfb;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  color: #969696;
+  font-weight: 300;
+  padding: 10px;
+  width: 100%;
+}
+
+button, select {
+  text-transform: none;
+}
+
+button, input, optgroup, select, textarea {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+select:not(:-internal-list-box) {
+  overflow: visible !important;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
+.chosen-container {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.wpf_form_billing_address_country .chosen-container, .wpf_form_billing_address_state .chosen-container, .wpf_form_shipping_address_country .chosen-container, .wpf_form_shipping_address_state .chosen-container {
+  background: #fff;
+  width: 100%!important;
+}
+
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.chosen-container .chosen-single {
+  background: #fbfbfb;
+  border-color: #d6d6d6;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #969696;
+  height: 44px;
+  padding: 9px 10px;
+}
+
+.chosen-container-single .chosen-single span {
+  display: block;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chosen-container-single .chosen-single div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 18px;
+  height: 100%;
+}
+
+.chosen-container-single .chosen-single div b {
+  background-position: -4px 10px;
+}
+
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*background: url(/packs/images/chosen-sprite-1ebc2bf290c99321da5e6ff390a96b98.png) no-repeat 0 2px*/
+}
+
+.chosen-container-active .chosen-single, .chosen-container-active.chosen-with-drop .chosen-single, .chosen-container .chosen-drop {
+  border-color: #94a545;
+}
+
+.chosen-container .chosen-drop {
+  background: #fbfbfb;
+  color: #969696;
+}
+
+.chosen-container-single .chosen-drop {
+  margin-top: -1px;
+  border-radius: 0 0 4px 4px;
+  background-clip: padding-box;
+}
+
+.chosen-container .chosen-drop {
+  position: absolute;
+  top: 100%;
+  left: -9999px;
+  z-index: 1010;
+  width: 100%;
+  border: 1px solid #aaa;
+  border-top: 0;
+  background: #fff;
+  box-shadow: 0 4px 5px rgba(0,0,0,.15);
+}
+
+.chosen-container-single .chosen-search {
+  position: relative;
+  z-index: 1010;
+  margin: 0;
+  padding: 3px 4px;
+  white-space: nowrap;
+}
+
+.chosen-container-single .chosen-search input[type=text] {
+  background-position: 100% -21px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.chosen-container-single .chosen-search input[type=text] {
+  margin: 1px 0;
+  padding: 4px 20px 4px 5px;
+  width: 100%;
+  height: auto;
+  outline: 0;
+  border: 1px solid #aaa;
+  /*background: #fff url(/packs/images/chosen-sprite-1ebc2bf….png) no-repeat 100% -20px;*/
+  /*background: url(/packs/images/chosen-sprite-1ebc2bf….png) no-repeat 100% -20px;*/
+  font-size: 1em;
+  font-family: sans-serif;
+  line-height: normal;
+  border-radius: 0;
+}
+
+.chosen-container .chosen-results {
+  color: #969696;
+}
+
+.chosen-container .chosen-results {
+  color: #444;
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: auto;
+  margin: 0 4px 4px 0;
+  padding: 0 0 0 4px;
+  max-height: 240px;
+  -webkit-overflow-scrolling: touch;
+  width: 100%;
+}
+
+.form-group.select.optional select.for_chosen, .form-group.select.optional select.for_chosen:required, .form-group.select.required select.for_chosen, .form-group.select.required select.for_chosen:required {
+  display: block!important;
+  opacity: 0;
+  padding: 9px 0;
+  position: absolute;
+  z-index: 0;
+}
+
+select {
+  -moz-appearance: menulist-text;
+  -webkit-appearance: none;
+  background: #fbfbfb;
+  border: 1px solid #d6d6d6;
+  border-radius: 2px;
+  color: #969696;
+  font-weight: 300;
+  padding: 10px;
+  width: 100%;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  white-space: pre;
+  min-height: 1.2em;
+  padding: 0px 2px 1px;
+}
+
+.wpf_form_billing_address_country .chosen-container, .wpf_form_billing_address_state .chosen-container, .wpf_form_shipping_address_country .chosen-container, .wpf_form_shipping_address_state .chosen-container {
+  background: #fff;
+  width: 100%!important;
+}
+
+.chosen-container {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.form-group.select.optional select.for_chosen, .form-group.select.optional select.for_chosen:required, .form-group.select.required select.for_chosen, .form-group.select.required select.for_chosen:required {
+  display: block!important;
+  opacity: 0;
+  padding: 9px 0;
+  position: absolute;
+  z-index: 0;
+}
+
+.wpf_form_billing_address_country .chosen-container, .wpf_form_billing_address_state .chosen-container, .wpf_form_shipping_address_country .chosen-container, .wpf_form_shipping_address_state .chosen-container {
+  background: #fff;
+  width: 100%!important;
+}
+
+.chosen-container .chosen-single {
+  background: #fbfbfb;
+  border-color: #d6d6d6;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #969696;
+  height: 44px;
+  padding: 9px 10px;
+}
+
+.chosen-container-single .chosen-single {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0 0 0 8px;
+  height: 25px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#fff),color-stop(50%,#f6f6f6),color-stop(52%,#eee),color-stop(100%,#f4f4f4));
+  background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4);
+  background: -moz-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  background: -o-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  background: linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4);
+  background-clip: padding-box;
+  box-shadow: inset 0 0 3px #fff, 0 1px 1px rgba(0,0,0,.1);
+  color: #444;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+.chosen-container a {
+  cursor: pointer;
+}
+
+.chosen-container-single .chosen-single span {
+  display: block;
+  overflow: hidden;
+  margin-right: 26px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.chosen-container-single .chosen-single div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: block;
+  width: 18px;
+  height: 100%;
+}
+
+.chosen-container-single .chosen-single div b {
+  background-position: -4px 10px;
+}
+
+.chosen-container-single .chosen-single div b {
+  display: block;
+  width: 100%;
+  height: 100%;
+  /*background: url(/packs/images/chosen-sprite-1ebc2bf….png) no-repeat 0 2px;*/
+}
+
+.wpf_form_billing_address_country .chosen-container, .wpf_form_billing_address_state .chosen-container, .wpf_form_shipping_address_country .chosen-container, .wpf_form_shipping_address_state .chosen-container {
+  background: #fff;
+  width: 100%!important;
+}
+
+.chosen-container {
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.chosen-container {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 13px;
+  zoom: 1;
+  *display: inline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.chosen-container .chosen-single {
+  background: #fbfbfb;
+  border-color: #d6d6d6;
+  border-radius: 2px;
+  box-shadow: none;
+  color: #969696;
+  height: 44px;
+  padding: 9px 10px;
+}
+
+.chosen-container-single .chosen-single {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  padding: 0 0 0 8px;
+  height: 25px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  background-color: #fff;
+  background: -webkit-gradient(linear,50% 0,50% 100%,color-stop(20%,#fff),color-stop(50%,#f6f6f6),color-stop(52%,#eee),color-stop(100%,#f4f4f4));
+  background: -webkit-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4);
+  background: -moz-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  background: -o-linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4 100%);
+  background: linear-gradient(top,#fff 20%,#f6f6f6 50%,#eee 52%,#f4f4f4);
+  background-clip: padding-box;
+  box-shadow: inset 0 0 3px #fff, 0 1px 1px rgba(0,0,0,.1);
+  color: #444;
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 24px;
+}
+
+input:focus, select:focus {
+  background: #fbfbfb;
+  border-color: #94a545;
+  box-shadow: 0 0 5px rgba(0,0,0,.2);
+  color: #94a545;
+  outline: none;
+}

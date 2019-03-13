@@ -1,3 +1,4 @@
-<p>
-  languages works!
-</p>
+<img src="assets/img/language.svg" class="img-container" (click)="displayed = !displayed">
+<div *ngIf="displayed">
+  <span *ngFor="let lang of languages" (click)="changeLang(lang)" class="lang">{{lang.language}}</span>
+</div>

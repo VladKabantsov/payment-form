@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { environment } from '../../../environments/environment';
+
+interface Language {
+  language: string;
+  abbreviation: string;
+}
 
 @Component({
   selector: 'app-languages',
@@ -7,9 +13,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LanguagesComponent implements OnInit {
 
-  constructor() { }
+  private host: string = environment.baseUrl;
+  public displayed = false;
+  public languages: Language[] = [
+    { language: 'English', abbreviation: 'en' },
+    { language: 'Russian', abbreviation: 'rus' },
+  ];
 
-  ngOnInit() {
+  constructor() {
   }
 
+  ngOnInit(): void {
+  }
+
+  changeLang(lang: Language): void {
+    // this.router.navigateByUrl(`${this.host}${lang.abbreviation}`);
+  }
 }
