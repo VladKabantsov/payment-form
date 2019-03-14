@@ -9,6 +9,8 @@ import { UserFormComponent } from './components/user-form/user-form.component';
 import { LanguagesComponent } from './components/languages/languages.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentProcessedComponent } from './components/payment-processed/payment-processed.component';
+import { FormsContainerComponent } from './components/forms-container/forms-container.component';
+import { LanguagesService } from './services/languages.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +20,16 @@ import { PaymentProcessedComponent } from './components/payment-processed/paymen
     UserFormComponent,
     LanguagesComponent,
     PaymentProcessedComponent,
+    FormsContainerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [
+    LanguagesService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,4 +1,6 @@
-<img src="assets/img/language.svg" class="img-container" (click)="displayed = !displayed">
-<div *ngIf="displayed">
-  <span *ngFor="let lang of languages" (click)="changeLang(lang)" class="lang">{{lang.language}}</span>
+<div class="position-relative">
+  <img src="assets/img/language.svg" class="img-container" (click)="displayed = !displayed">
+  <div *ngIf="displayed" class="languages-block">
+    <span *ngFor="let lang of languages" (click)="changeLang(lang)" class="lang">{{lang.language}}</span>
+  </div>
 </div>

@@ -1,28 +1,28 @@
-<div class="billing-address"><h4 class="customer-title" style="display: none;">Customer information</h4>
+<div class="billing-address"><h4 class="customer-title" style="display: none;">{{content.cusInfo}}</h4>
   <div class="customer-info-wrapper">
-    <div class="form-group email optional readonly wpf_form_customer_email"><label class="control-label email optional" for="wpf_form_customer_email">Customer
-      email</label><input class="form-control string email optional readonly" tabindex="1" readonly="readonly" type="email" value="john.doe@example.com" name="wpf_form[customer_email]" id="wpf_form_customer_email"></div>
-    <div class="form-group tel optional wpf_form_customer_phone"><label class="control-label tel optional" for="wpf_form_customer_phone"><abbr title="required">* </abbr>Customer phone</label><input class="form-control string tel optional" tabindex="1" type="tel" value="+11234567890" name="wpf_form[customer_phone]" id="wpf_form_customer_phone" required="required"></div>
-    <div class="form-group string optional wpf_form_usage"><label class="control-label string optional" for="wpf_form_usage">Usage</label><input class="form-control string optional" tabindex="1" type="text" value="Test Usage" name="wpf_form[usage]" id="wpf_form_usage"></div>
+    <div class="form-group email optional readonly wpf_form_customer_email"><label class="control-label email optional" for="wpf_form_customer_email">{{content.cusEmail}}
+      </label><input class="form-control string email optional readonly" tabindex="1" readonly="readonly" type="email" value="john.doe@example.com" name="wpf_form[customer_email]" id="wpf_form_customer_email"></div>
+    <div class="form-group tel optional wpf_form_customer_phone"><label class="control-label tel optional" for="wpf_form_customer_phone"><abbr title="required">* </abbr>{{content.cusPhone}}</label><input class="form-control string tel optional" tabindex="1" type="tel" value="+11234567890" name="wpf_form[customer_phone]" id="wpf_form_customer_phone" required="required"></div>
+    <div class="form-group string optional wpf_form_usage"><label class="control-label string optional" for="wpf_form_usage">{{content.usage}}</label><input class="form-control string optional" tabindex="1" type="text" value="Test Usage" name="wpf_form[usage]" id="wpf_form_usage"></div>
   </div>
   <h4 class="billing-title" style="display: none;">Billing address</h4>
   <div class="billing-address-wrapper">
-    <div class="form-group string optional wpf_form_billing_address_first_name"><label class="control-label string optional" for="wpf_form_billing_address_first_name"><abbr title="required">* </abbr>First name</label><input class="form-control string optional" tabindex="1" type="text" value="Tsvetan" name="wpf_form[billing_address_first_name]" id="wpf_form_billing_address_first_name" required="required"></div>
-    <div class="form-group string optional wpf_form_billing_address_last_name"><label class="control-label string optional" for="wpf_form_billing_address_last_name"><abbr title="required">* </abbr>Last name</label><input class="form-control string optional" tabindex="1" type="text" value="Marinov" name="wpf_form[billing_address_last_name]" id="wpf_form_billing_address_last_name" required="required"></div>
-    <div class="form-group string optional wpf_form_billing_address_address1"><label class="control-label string optional" for="wpf_form_billing_address_address1"><abbr title="required">* </abbr>Address 1</label><input class="form-control string optional" tabindex="1" type="text" value="street 1234" name="wpf_form[billing_address_address1]" id="wpf_form_billing_address_address1" required="required"></div>
+    <div class="form-group string optional wpf_form_billing_address_first_name"><label class="control-label string optional" for="wpf_form_billing_address_first_name"><abbr title="required">* </abbr>{{content.fname}}</label><input class="form-control string optional" tabindex="1" type="text" value="Tsvetan" name="wpf_form[billing_address_first_name]" id="wpf_form_billing_address_first_name" required="required"></div>
+    <div class="form-group string optional wpf_form_billing_address_last_name"><label class="control-label string optional" for="wpf_form_billing_address_last_name"><abbr title="required">* </abbr>{{content.lname}}</label><input class="form-control string optional" tabindex="1" type="text" value="Marinov" name="wpf_form[billing_address_last_name]" id="wpf_form_billing_address_last_name" required="required"></div>
+    <div class="form-group string optional wpf_form_billing_address_address1"><label class="control-label string optional" for="wpf_form_billing_address_address1"><abbr title="required">* </abbr>{{content.adr}}</label><input class="form-control string optional" tabindex="1" type="text" value="street 1234" name="wpf_form[billing_address_address1]" id="wpf_form_billing_address_address1" required="required"></div>
     <div class="form-group string optional wpf_form_billing_address_address2" style="display: none;">
       <label class="control-label string optional" for="wpf_form_billing_address_address2">Address
         2</label><input class="form-control string optional" tabindex="1" type="text" name="wpf_form[billing_address_address2]" id="wpf_form_billing_address_address2"></div>
-    <div class="form-group string optional wpf_form_billing_address_city"><label class="control-label string optional" for="wpf_form_billing_address_city"><abbr title="required">* </abbr>City</label><input class="form-control string optional" tabindex="1" type="text" value="New York City" name="wpf_form[billing_address_city]" id="wpf_form_billing_address_city" required="required"></div>
-    <div class="form-group string optional wpf_form_billing_address_zip_code"><label class="control-label string optional" for="wpf_form_billing_address_zip_code"><abbr title="required">* </abbr>Zip code</label><input class="form-control string optional" tabindex="1" type="text" value="11923" name="wpf_form[billing_address_zip_code]" id="wpf_form_billing_address_zip_code" required="required"></div>
+    <div class="form-group string optional wpf_form_billing_address_city"><label class="control-label string optional" for="wpf_form_billing_address_city"><abbr title="required">* </abbr>{{content.city}}</label><input class="form-control string optional" tabindex="1" type="text" value="New York City" name="wpf_form[billing_address_city]" id="wpf_form_billing_address_city" required="required"></div>
+    <div class="form-group string optional wpf_form_billing_address_zip_code"><label class="control-label string optional" for="wpf_form_billing_address_zip_code"><abbr title="required">* </abbr>{{content.zip}}</label><input class="form-control string optional" tabindex="1" type="text" value="11923" name="wpf_form[billing_address_zip_code]" id="wpf_form_billing_address_zip_code" required="required"></div>
     <div class="form-group string optional wpf_form_billing_address_zip_code">
       <label class="control-label string optional" for="wpf_form_billing_address_zip_code">
-        <abbr title="required">* </abbr>Country</label>
+        <abbr title="required">* </abbr>{{content.country}}</label>
       <input class="form-control string optional" disabled tabindex="1" type="text" value="United States" name="wpf_form[billing_address_zip_code]">
     </div>
     <div class="form-group string optional wpf_form_billing_address_zip_code">
       <label class="control-label string optional" for="wpf_form_billing_address_zip_code">
-        <abbr title="required">* </abbr>State</label>
+        <abbr title="required">* </abbr>{{content.state}}</label>
       <input class="form-control string optional" disabled tabindex="1" type="text" value="New York" name="wpf_form[billing_address_zip_code]">
     </div>
   </div>

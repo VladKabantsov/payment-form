@@ -1,24 +1,24 @@
 <div class="merchant-logo"></div>
 <div class="payment-form">
   <div class="bg-white">
-    <h3>You are about to pay for...</h3>
-    Test Description
+    <h3>{{content.payFor}}</h3>
+    {{content.descr}}
   </div>
 </div>
   <div class="amount">50.00 USD</div>
 <div class="payment-form">
   <div class="bg-white">
-    <h4>Pay with Credit Card</h4>
+    <h4>{{content.payCard}}</h4>
     <div class="accepted-cards">
-      <span>Accepted cards</span>
+      <span>{{content.accCards}}</span>
       <div>
         <img src="assets/img/visa.svg" class="payment-system-img">
         <img src="assets/img/master.svg" class="payment-system-img">
         <img src="assets/img/maestro.svg" class="payment-system-img">
       </div>
       <div class="descriptor-container">
-        <div class="descriptor-title">Your credit card statement will be billed as</div>
-        <div class="descriptor-content">test 123456789</div>
+        <div class="descriptor-title">{{content.billed}}</div>
+        <div class="descriptor-content">{{content.testData}}</div>
       </div>
       <!--credit card-->
       <div class="card-wrapper credit-card">
@@ -61,19 +61,19 @@
     <div class="tac wpf_form_tac">
       <input name="wpf_form[tac]" type="hidden" value="0"><input tabindex="3" type="checkbox" value="1" name="wpf_form[tac]" id="wpf_form_tac">
       <label for="wpf_form_tac"></label>
-      I acknowledge I have read the
-      <a target="_blank" href="http://genesissupport247.com/en/terms-conditions">Terms &amp; Conditions</a>
-      of purchase, <a target="_blank" href="http://genesissupport247.com/en/privacy-policy">Privacy Policy</a>
-      and authorize the payment.
+      {{content.terms1}}
+      <a target="_blank" href="http://genesissupport247.com/en/terms-conditions">{{content.terms2}}</a>
+      {{content.terms3}} <a target="_blank" href="http://genesissupport247.com/en/privacy-policy">{{content.terms4}}</a>
+      {{content.terms5}}
       <div class="div"></div>
     </div>
-    <input type="submit" name="commit" value="Pay" class="submit payment-submit" tabindex="3">
+    <input type="submit" name="commit" value="{{content.pay}}" class="submit payment-submit" tabindex="3">
     <div class="loader">
       <svg class="circular" viewBox="25 25 50 50">
         <circle class="path-background" cx="50" cy="50" fill="none" r="20" stroke-miterlimit="10" stroke-width="3"></circle>
         <circle class="path" cx="50" cy="50" fill="none" r="20" stroke-miterlimit="10" stroke-width="2"></circle>
       </svg>
     </div>
-    <a class="cancel" href="/en/payment/cancel/9141cda500fe2e6d910b777f0df31f51">Cancel and return to merchant</a>
+    <a class="cancel" href="/en/payment/cancel/9141cda500fe2e6d910b777f0df31f51">{{content.cancelRet}}</a>
   </div>
 <!--</div>-->

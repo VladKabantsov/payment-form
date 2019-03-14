@@ -10,3 +10,15 @@
   margin: 10px;
   cursor: pointer;
 }
+
+.languages-block {
+  position: absolute;
+  right: 0;
+  transition: 1s;
+  transform: translate(0%, 85%);
+  z-index: 500;
+  height: 50px;
+  background-color: #eee;
+  border: 1px solid #cecece;
+}
+

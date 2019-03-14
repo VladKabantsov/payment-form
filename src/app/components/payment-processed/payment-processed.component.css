@@ -1,0 +1,43 @@
+.main {
+  float: left;
+  position: relative;
+  width: 100%;
+}
+
+.payment-form-timeout {
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 2px;
+  box-sizing: border-box;
+  padding: 10px 50px;
+  position: relative;
+  width: 620px;
+  z-index: 4;
+}
+
+.message, .message p {
+  font-weight: 100;
+}
+
+.message {
+  color: #333;
+  font-size: 33px;
+  line-height: 1.2em;
+  margin: 40px 0 50px;
+}
+
+.hints, .message {
+  text-align: center;
+}
+
+.message, .message p {
+  font-weight: 100;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}

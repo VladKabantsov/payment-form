@@ -1,6 +1,6 @@
 <div class="form-group string required wpf_form_card_holder">
   <label class="control-label string required" for="wpf_form_card_holder">
-    <abbr title="required">*</abbr> Card holder
+    <abbr title="required">*</abbr> {{content.holder}}
   </label>
   <input class="form-control string required jp-card-valid" tabindex="2" required="required" aria-required="true"
          type="text" value=" `````` " name="wpf_form[card_holder]" id="wpf_form_card_holder">
@@ -8,7 +8,7 @@
 <div class="card-number">
   <div class="form-group string required wpf_form_card_number">
     <label class="control-label string required" for="wpf_form_card_number">
-      <abbr title="required">*</abbr> Card number</label>
+      <abbr title="required">*</abbr> {{content.cardNum}}</label>
     <input class="form-control string required" autocomplete="off" tabindex="2" required="required" aria-required="true"
            type="text" name="wpf_form[card_number]" id="wpf_form_card_number">
   </div>
@@ -18,7 +18,7 @@
     <div class="form-group date required readonly wpf_form_expiration_date">
       <label class="control-label date required" for="wpf_form_expiration_date_2i">
         <abbr title="required">*</abbr>
-        Expiration date
+        {{content.expDate}}
       </label>
       <div class="form-inline">
         <input type="hidden" id="wpf_form_expiration_date_3i" name="wpf_form[expiration_date(3i)]" value="1">
