@@ -1,9 +1,14 @@
 <div class="billing-address"><h4 class="customer-title" style="display: none;">{{content.cusInfo}}</h4>
   <div class="customer-info-wrapper">
-    <div class="form-group email optional readonly wpf_form_customer_email"><label class="control-label email optional" for="wpf_form_customer_email">{{content.cusEmail}}
-      </label><input class="form-control string email optional readonly" tabindex="1" readonly="readonly" type="email" value="john.doe@example.com" name="wpf_form[customer_email]" id="wpf_form_customer_email"></div>
+    <div class="form-group email optional readonly wpf_form_customer_email">
+      <label class="control-label email optional" for="wpf_form_customer_email">{{content.cusEmail}}</label>
+      <input class="form-control string email optional readonly" tabindex="1" readonly="readonly" type="email" value="john.doe@example.com" name="wpf_form[customer_email]" id="wpf_form_customer_email" [formControl]="form.get('customer_email')">
+    </div>
     <div class="form-group tel optional wpf_form_customer_phone"><label class="control-label tel optional" for="wpf_form_customer_phone"><abbr title="required">* </abbr>{{content.cusPhone}}</label><input class="form-control string tel optional" tabindex="1" type="tel" value="+11234567890" name="wpf_form[customer_phone]" id="wpf_form_customer_phone" required="required"></div>
-    <div class="form-group string optional wpf_form_usage"><label class="control-label string optional" for="wpf_form_usage">{{content.usage}}</label><input class="form-control string optional" tabindex="1" type="text" value="Test Usage" name="wpf_form[usage]" id="wpf_form_usage"></div>
+    <div class="form-group string optional wpf_form_usage">
+      <label class="control-label string optional" for="wpf_form_usage">{{content.usage}}</label>
+      <input class="form-control string optional" tabindex="1" type="text" value="Test Usage" name="wpf_form[usage]" id="wpf_form_usage" [formControl]="form.get('usage')">
+    </div>
   </div>
   <h4 class="billing-title" style="display: none;">Billing address</h4>
   <div class="billing-address-wrapper">

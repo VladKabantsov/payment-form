@@ -67,7 +67,7 @@
       {{content.terms5}}
       <div class="div"></div>
     </div>
-    <input type="submit" name="commit" value="{{content.pay}}" class="submit payment-submit" tabindex="3">
+    <input type="button" (click)="save.emit()" name="commit" value="{{content.pay}}" class="submit payment-submit" tabindex="3">
     <div class="loader">
       <svg class="circular" viewBox="25 25 50 50">
         <circle class="path-background" cx="50" cy="50" fill="none" r="20" stroke-miterlimit="10" stroke-width="3"></circle>

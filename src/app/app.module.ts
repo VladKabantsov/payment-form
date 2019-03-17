@@ -11,6 +11,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { PaymentProcessedComponent } from './components/payment-processed/payment-processed.component';
 import { FormsContainerComponent } from './components/forms-container/forms-container.component';
 import { LanguagesService } from './services/languages.service';
+import { AvailableLangGuard } from './guards/available-lang.guard';
+import { HttpClientModule } from '@angular/common/http';
+import { RequestServiceService } from './services/request-service.service';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -26,9 +30,13 @@ import { LanguagesService } from './services/languages.service';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
   ],
   providers: [
     LanguagesService,
+    AvailableLangGuard,
+    RequestServiceService,
   ],
   bootstrap: [AppComponent]
 })

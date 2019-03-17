@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnDestroy, OnInit, Output } from '@angular/core';
 import { LanguagesService } from '../../services/languages.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs';
@@ -13,6 +13,7 @@ export class MainInfoComponent implements OnInit, OnDestroy {
 
   public content: any;
   private ngDestroy$: Subject<void> = new Subject();
+  @Output() save: EventEmitter<void> = new EventEmitter();
 
   constructor(
     private langService: LanguagesService,

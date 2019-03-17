@@ -1,8 +1,9 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, Input, OnDestroy, OnInit } from '@angular/core';
 import { LanguagesService } from '../../services/languages.service';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
+import { FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-user-form',
@@ -11,6 +12,7 @@ import { takeUntil } from 'rxjs/operators';
 })
 export class UserFormComponent implements OnInit, OnDestroy {
 
+  @Input() form: FormGroup;
   public content: any;
   private ngDestroy$: Subject<void> = new Subject();
 
