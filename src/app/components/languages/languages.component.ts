@@ -32,8 +32,8 @@ export class LanguagesComponent implements OnInit, OnDestroy {
     this.route.params.pipe(
       takeUntil(this.ngDestroy$),
     ).subscribe((params: Params) => {
-      console.log('params', params);
-      this.hash = params['hash'];
+      // console.log('params', params);
+      // this.hash = params['hash'];
     });
   }
 
@@ -43,6 +43,6 @@ export class LanguagesComponent implements OnInit, OnDestroy {
   }
 
   changeLang(lang: Language): void {
-    this.router.navigate([`/main/${lang.abbreviation}/${this.hash}`]);
+    this.router.navigate([`/main/${lang.abbreviation}/afsafasf`]);
   }
 }
