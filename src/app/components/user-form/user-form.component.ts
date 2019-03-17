@@ -28,6 +28,10 @@ export class UserFormComponent implements OnInit, OnDestroy {
       const lang: string = params['lang'];
       this.content = this.langService.getTranslation(lang);
     });
+    this.form.valueChanges
+        .subscribe((data) => {
+          console.log(data);
+        });
   }
 
   ngOnDestroy(): void {

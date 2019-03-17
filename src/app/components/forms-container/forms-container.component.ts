@@ -15,26 +15,30 @@ export class FormsContainerComponent implements OnInit {
 
   public form: FormGroup = this.fb.group({
     transaction_id: [null, Validators.required],
-    transaction_type: [null],
-    currency: [null],
+    transaction_type: [null, Validators.required],
+    currency: [null, Validators.required],
     amount: [null],
-    first_name: [null],
-    last_name: [null],
-    card_holder: [null],
-    card_number: [null],
-    expiration_year: [null],
-    expiration_month: [null],
-    cvv: [null],
+    first_name: [null, Validators.required],
+    last_name: [null, Validators.required],
+    card_holder: [null, Validators.required],
+    card_number: [null, Validators.required],
+    expiration_year: [null, Validators.required],
+    expiration_month: [null, Validators.required],
+    cvv: [null, Validators.required],
     customer_email: [null],
-    customer_phone: [null],
+    customer_phone: [null, Validators.required],
     usage: [null],
-    address1: [null],
-    city: [null],
-    zip_code: [null],
-    country: [null],
-    state: [null],
+    address1: [null, Validators.required],
+    city: [null, Validators.required],
+    zip_code: [null, Validators.required],
+    country: [null, Validators.required],
+    state: [null, Validators.required],
   });
-  public userForm: FormGroup = this.fb.group({});
+  public userForm: FormGroup = this.fb.group({
+    transaction_id: [null],
+    customer_email: [null],
+    usage: [null]
+  });
   private ngDestroy$: Subject<void> = new Subject();
 
   constructor(

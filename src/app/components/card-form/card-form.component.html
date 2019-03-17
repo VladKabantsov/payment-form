@@ -3,14 +3,16 @@
     <abbr title="required">*</abbr> {{content.holder}}
   </label>
   <input class="form-control string required jp-card-valid" tabindex="2" required="required" aria-required="true"
-         type="text" value=" `````` " name="wpf_form[card_holder]" id="wpf_form_card_holder">
+         type="text" value=" `````` " name="wpf_form[card_holder]" id="wpf_form_card_holder"
+         [formControl]="form.get('card_holder')">
 </div>
 <div class="card-number">
   <div class="form-group string required wpf_form_card_number">
     <label class="control-label string required" for="wpf_form_card_number">
       <abbr title="required">*</abbr> {{content.cardNum}}</label>
     <input class="form-control string required" autocomplete="off" tabindex="2" required="required" aria-required="true"
-           type="text" name="wpf_form[card_number]" id="wpf_form_card_number">
+           type="text" name="wpf_form[card_number]" id="wpf_form_card_number"
+           [formControl]="form.get('card_number')">
   </div>
 </div>
 <div class="details-row">
@@ -23,8 +25,9 @@
       <div class="form-inline">
         <input type="hidden" id="wpf_form_expiration_date_3i" name="wpf_form[expiration_date(3i)]" value="1">
         <select id="wpf_form_expiration_date_2i" name="wpf_form[expiration_date(2i)]"
-                class="form-control date required readonly" tabindex="2" readonly="readonly" required="required"
-                aria-required="true">
+                class="form-control date required readonly" tabindex="2"  required="required"
+                aria-required="true"
+                [formControl]="form.get('expiration_month')">
           <option value="">Select Month</option>
           <option value="1">January</option>
           <option value="2">February</option>
@@ -41,7 +44,8 @@
         </select>
         <select id="wpf_form_expiration_date_1i" name="wpf_form[expiration_date(1i)]"
                 class="form-control date required readonly" tabindex="2" readonly="readonly" required="required"
-                aria-required="true">
+                aria-required="true"
+                [formControl]="form.get('expiration_year')">
           <option value="">Select Year</option>
           <option value="2019">2019</option>
           <option value="2020">2020</option>
@@ -73,7 +77,7 @@
       <abbr title="required">* </abbr>
       CVV
     </label>
-    <input class="form-control string optional" size="6" maxlength="4" autocomplete="off" id="wpf_form_requires_cvv" tabindex="2" type="text" name="wpf_form[cvv]" required="required">
+    <input class="form-control string optional" size="6" maxlength="4" autocomplete="off" id="wpf_form_requires_cvv" tabindex="2" type="text" name="wpf_form[cvv]" required="required" [formControl]="form.get('cvv')">
   </div>
   <input hidden="" id="expiry" tabindex="-1">
 </div>
