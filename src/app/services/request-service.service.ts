@@ -10,16 +10,23 @@ import { Observable } from 'rxjs';
 })
 export class RequestServiceService {
   private baseUrl: string = environment.serverUrl;
-  public headers = new HttpHeaders({ 'Content-Type': 'application/xml' });
+  public headers = new HttpHeaders({
+    'Content-Type': 'application/xml',
+    'Accept-Type': 'application/xml'
+  });
   constructor(
     private http: HttpClient,
   ) {
   }
 
   getParams(hash?: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/${hash}`, {
-      headers: this.headers
-      });
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/xml;charset=UTF-8',
+      'Accept': 'application/xml',
+      'Transfer-Encoding': 'chunked',
+      'Cache-Control': 'no-cache, no-store, max-age=0, must-revalidate',
+    });
+    return this.http.get(`${this.baseUrl}/${hash}`, { headers: headers });
   }
 
   save(main: MainForm, user: UserForm, hash: string): void {

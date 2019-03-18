@@ -52,7 +52,7 @@ export class FormsContainerComponent implements OnInit {
     this.route.params.pipe(
       switchMap((params: Params) => {
         if (params['hash']) {
-          this.requestServ.getParams(params['hash']);
+          return this.requestServ.getParams(params['hash']);
         }
         return EMPTY;
       }),
