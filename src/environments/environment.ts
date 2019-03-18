@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   baseUrl: 'http://localhost:4000/',
-  serverUrl: 'http://185.185.126.15:8080/datalis_web_payment/wpf/',
+  serverUrl: 'http://185.185.126.15:8080/datalis_web_payment/wpf',
 };
 
 /*
