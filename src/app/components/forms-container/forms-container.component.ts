@@ -15,8 +15,8 @@ export class FormsContainerComponent implements OnInit {
 
   public form: FormGroup = this.fb.group({
     transaction_id: [null, Validators.required],
-    transaction_type: [null, Validators.required],
-    currency: [null, Validators.required],
+    transaction_type: [null],
+    currency: [null],
     amount: [null],
     first_name: [null, Validators.required],
     last_name: [null, Validators.required],
@@ -34,11 +34,7 @@ export class FormsContainerComponent implements OnInit {
     country: [null, Validators.required],
     state: [null, Validators.required],
   });
-  public userForm: FormGroup = this.fb.group({
-    transaction_id: [null],
-    customer_email: [null],
-    usage: [null]
-  });
+  private hash: string;
   private ngDestroy$: Subject<void> = new Subject();
 
   constructor(
@@ -52,20 +48,20 @@ export class FormsContainerComponent implements OnInit {
     this.route.params.pipe(
       switchMap((params: Params) => {
         if (params['hash']) {
+          this.hash = params['hash'];
           return this.requestServ.getParams(params['hash']);
         }
         return EMPTY;
       }),
       takeUntil(this.ngDestroy$),
     ).subscribe((obj: UserForm) => {
-      console.log('UserForm', obj);
-      this.userForm.patchValue(obj);
+      this.form.patchValue(obj);
     });
   }
 
   save(): void {
     if (this.form.valid) {
-      // this.requestServ.save(this.form.getRawValue(), , 'sah');
+      this.requestServ.save(this.form.getRawValue(), this.hash);
     }
   }
 }

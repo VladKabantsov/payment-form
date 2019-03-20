@@ -4,7 +4,7 @@
       <label class="control-label email optional" for="wpf_form_customer_email">{{content.cusEmail}}</label>
       <input class="form-control string email optional readonly" tabindex="1" type="email" value="john.doe@example.com" name="wpf_form[customer_email]" id="wpf_form_customer_email" [formControl]="form.get('customer_email')">
     </div>
-    <div class="form-group tel optional wpf_form_customer_phone"><label class="control-label tel optional" for="wpf_form_customer_phone"><abbr title="required">* </abbr>{{content.cusPhone}}</label><input class="form-control string tel optional" tabindex="1" type="tel" name="wpf_form[customer_phone]" id="wpf_form_customer_phone" required="required"></div>
+    <div class="form-group tel optional wpf_form_customer_phone"><label class="control-label tel optional" for="wpf_form_customer_phone"><abbr title="required">* </abbr>{{content.cusPhone}}</label><input [formControl]="form.get('customer_phone')" class="form-control string tel optional" tabindex="1" type="tel" name="wpf_form[customer_phone]" id="wpf_form_customer_phone" required="required"></div>
     <div class="form-group string optional wpf_form_usage">
       <label class="control-label string optional" for="wpf_form_usage">{{content.usage}}</label>
       <input class="form-control string optional" tabindex="1" type="text" value="Test Usage" name="wpf_form[usage]" id="wpf_form_usage" [formControl]="form.get('usage')">
@@ -23,12 +23,12 @@
     <div class="form-group string optional wpf_form_billing_address_zip_code">
       <label class="control-label string optional" for="wpf_form_billing_address_zip_code">
         <abbr title="required">* </abbr>{{content.country}}</label>
-      <input class="form-control string optional"  tabindex="1" type="text" value="United States" name="wpf_form[billing_address_zip_code]" [formControl]="form.get('zip_code')">
+      <input class="form-control string optional"  tabindex="1" type="text" value="United States" name="wpf_form[billing_address_zip_code]" [formControl]="form.get('country')">
     </div>
     <div class="form-group string optional wpf_form_billing_address_zip_code">
       <label class="control-label string optional" for="wpf_form_billing_address_zip_code">
         <abbr title="required">* </abbr>{{content.state}}</label>
-      <input class="form-control string optional"  tabindex="1" type="text" value="New York" name="wpf_form[billing_address_zip_code]" [formControl]="form.get('zip_code')">
+      <input class="form-control string optional"  tabindex="1" type="text" value="New York" name="wpf_form[billing_address_zip_code]" [formControl]="form.get('state')">
     </div>
   </div>
 </div>
