@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { MainForm } from '../models/main-form';
 import { Observable } from 'rxjs';
@@ -21,6 +21,8 @@ export class RequestServiceService {
   }
 
   save(main: MainForm, hash: string): void {
-    this.http.post(`${this.saveUrl}/${hash}`, JSON.stringify(main));
+    const headers = new HttpHeaders();
+    headers.append('Content-Type', 'application/json');
+    this.http.post(`${this.saveUrl}/${hash}`, JSON.stringify(main), { headers }).subscribe();
   }
 }
